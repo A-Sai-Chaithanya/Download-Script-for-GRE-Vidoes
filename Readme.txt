@@ -1,27 +1,23 @@
-Run the download.sh file
+Run the below commands to execute file
+
+***********
+
+chmod 744 ./download.sh
+./download.sh "PATH"
+
+***********
 
 
-////////////////////////////////////////////////////////////////////   OR   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+###########
 
-Type the below commands to execute the script
-
-************
-
-python3 -m venv magoosh
-source magoosh/bin/activate
-pip install requirements.txt
-python3 get_magoosh.py "Path"
-deactivate
-rm -rf magoosh
-
-************
-
-####
-In place of "Path" specify  ***COMPLETE PATH*** as to where you want to save the videos. 
+In place of "PATH" specify  ***COMPLETE PATH*** as to where you want to save the videos. 
 For eg:  	"/usr/Documents/magoosh_videos"
 
-All videos will be saved under "magoosh_videos" folder based on the above example.
+If path not specified, 
+    1.) The folder is downloaded in the current directory itself.
+    2.) All videos will be saved under "magoosh_videos" folder.
 
-Takes 20 mins to download based on internet speed.
-####
+Takes 20 mins to download based on internet speed(30 Mbps).
+
+###########
