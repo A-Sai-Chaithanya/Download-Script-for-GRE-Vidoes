@@ -18,6 +18,6 @@ If path not specified,
     1.) The folder is downloaded in the current directory itself.
     2.) All videos will be saved under "magoosh_videos" folder.
 
-Takes 20 mins to download based on internet speed(30 Mbps).
+Takes 20 mins to download.
 
 ###########
