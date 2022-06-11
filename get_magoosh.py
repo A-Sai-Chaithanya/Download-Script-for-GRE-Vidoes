@@ -1,4 +1,4 @@
-import os,sys,requests
+import os,sys,requests,io
 from bs4 import BeautifulSoup as bs
 from urllib.parse import urlparse
 
@@ -12,14 +12,16 @@ def download_file(link,path):
     parsed_url = urlparse(req_url)
     capture_value = parsed_url.query
     download_link = "https://1filedownload.com/download.php?" + capture_value
-    res_file = requests.get(download_link,headers=headers)
+    res_file = requests.get(download_link,headers=headers,stream=True)
     filename = link.split("/")[-1]
-
-    file = open(path + filename,"wb")
+    
+    buffer = io.BytesIO()
     print("Starting Download....{0}".format(filename))
-    for chunk in res_file.iter_content(chunk_size=1024):
+    for chunk in res_file.iter_content(chunk_size=1024*256):
         if(chunk):
-            file.write(chunk)
+            buffer.write(chunk)
+    file = open(path + filename,"wb")
+    file.write(buffer.getvalue())
     file.close()
     print("Download Complete!!!")
 
@@ -101,4 +103,3 @@ def create_directory_hierarchy(path):
 
 if __name__ == "__main__":
     create_directory_hierarchy(sys.argv[1])
-
