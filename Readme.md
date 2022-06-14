@@ -1,6 +1,6 @@
 # GRE Videos Download Script
 
-This repo contains a python script to download Magoosh GRE Videos in [GRE-Videos](https://1filedownload.com/magoosh-gre-videos-1-download) website.
+This repo contains a python script to download Magoosh GRE Videos in <a href="https://1filedownload.com/magoosh-gre-videos-1-download/" target="_blank">GRE-Videos</a> website.
 The entire workflow is automated using a bash script.
 
 - Run the following commands to download:
