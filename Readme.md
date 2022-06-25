@@ -5,7 +5,7 @@ The entire workflow is automated using a bash script.
 
 - Run the following commands to download:
     - chmod 744 ./download.sh 
-    - ./download.sh "PATH"
+    - bash ./download.sh "PATH"
 
 ##
 
